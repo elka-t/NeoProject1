@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Banknotes{
 
         Scanner s = new Scanner(System.in);
