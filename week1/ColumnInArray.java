@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class ColumnInArray {
     public static void main(String[] args) throws IOException {
 
