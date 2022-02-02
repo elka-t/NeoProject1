@@ -1,4 +1,5 @@
 package pojoClasses;
+
 public class Customer {
     private String customerName;
     private int contact;
@@ -10,19 +11,27 @@ public class Customer {
         this.customerID = customerID;
     }
 
+    public Customer() {
+
+    }
+
     public int getContact() {
+
         return contact;
     }
 
     public void setContact(int contact) {
+
         this.contact = contact;
     }
 
     public int getCustomerID() {
+
         return customerID;
     }
 
     public void setCustomerID(int customerID) {
+
         this.customerID = customerID;
     }
 
@@ -32,10 +41,12 @@ public class Customer {
     }
 
     public String getCustomerName() {
+
         return customerName;
     }
 
     public void setCustomerName(String customerName) {
+
         this.customerName = customerName;
     }
 }

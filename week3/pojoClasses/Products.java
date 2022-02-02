@@ -3,13 +3,17 @@ package pojoClasses;
 public class Products {
     private int productID;
     private String productName;
-    private double price;
+    private float price;
 
 
     public Products(int productID, String productName, double price) {
         this.productID = productID;
         this.productName = productName;
         this.price = price;
+    }
+
+    public Products() {
+
     }
 
     public int getProductID() {
