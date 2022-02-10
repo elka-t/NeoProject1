@@ -1,0 +1,10 @@
+How I tested my connection
+First, I created connection with mySQL database through "Connection" class
+and added some message after connection to figure out whether it gets connection or not
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection =  DriverManager.getConnection(url,user,password);
+            System.out.println("Successfully connected to database "+url);
+
+Next I inserted data into specific table through "Statement" classes method, and to make sure it adds data properly
+updated my table in Workbench. The same I did with updating and deleting data.
