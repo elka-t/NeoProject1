@@ -1,0 +1,60 @@
+
+Get request that return all existing products:
+
+    @RequestMapping("/api/v1/products")
+    public List<Products> getAllProducts(){}
+
+    Path: GET http://localhost:8080/api/v1/products
+    Response: 200 OK
+    Result:
+        [
+            {
+                "id": 1,
+                "productName": "carrot",
+                "price": 12.0
+            },
+            {
+                "id": 2,
+                "productName": "sneakers",
+                "price": 56.5
+            }
+        ]
+------------------------------------------------------------------------------------------------------------------------
+Add new product
+    @PostMapping("/add")
+    public ProductModel addProduct(@RequestBody ProductModel product){}
+
+    Path: POST http://localhost:8080/api/v1/products/add
+    Format: JSON
+    Row:
+     {
+         "id": 5,
+         "productName": "strawberry",
+         "price": 89.0
+     }
+
+     Response: 200 OK
+
+------------------------------------------------------------------------------------------------------------------------
+
+Update products
+    @PostMapping("{id}")
+    public ResponseEntity<Products> updateProduct(@PathVariable("id") int id, @RequestBody Products productsDetail){}
+
+    Path: POST http://localhost:8080/api/v1/products/1
+    Format: JSON
+    Row:
+      [
+             {
+                 "productName" : "potato",
+                 "price": 100.0
+             }
+      ]
+
+    Response: 200 OK
+
+------------------------------------------------------------------------------------------------------------------------
+
+Delete product by id
+    Path: DELETE http://localhost:8080/api/v1/products/1
+    Response: 204 NO CONTENT
